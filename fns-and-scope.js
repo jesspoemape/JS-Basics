@@ -41,7 +41,7 @@ function getName() {
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+  //Answer: Parameters are given when the function is declared. Arguments are given when the function is invoked.
 
 
 //////////////////PROBLEM 5////////////////////
@@ -51,7 +51,8 @@ function getName() {
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //Answer Here
+  //Answer: Falsy values are 0, "", undefined, null, Nan, and false.
+  // To check if something is falsy, you can see if it is evaluated to one of the falsy values.
 
 
 
@@ -61,15 +62,18 @@ function getName() {
 
 //Create a function called myName that returns your name
 
-  //Code Here
-  
+  function myName() {
+    return "Jessica";
+  }  
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
-  //Code Here
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
+
+alert(newMyName());
 
 
 
@@ -79,10 +83,15 @@ function getName() {
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+  function outerFn() {
+    return(function () {
+      return "Jessica";
+    });
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
+  var innerFn = outerFn();
 
 //Now invoke innerFn.
+innerFn();
